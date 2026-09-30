@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        *{margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        font-family:Georgia, serif;
+
+        }
+        html{scroll-behavior: smooth;
+        scroll-padding-top: 80px;}
+        body{
+          padding-top: 70px;
+      }
+     
+     
+      
+
+        /* ===== NAVBAR THEME ===== */
+    .custom-navbar{
+    background-color:rgba(62, 39, 35, 0.904);
+    padding: 10px 20px;
+}
+
+   .custom-navbar .navbar-brand{
+    color:#f5e6d3;
+    font-size:22px;
+    font-weight:bolder;
+    }
+
+    .custom-navbar .nav-link{
+    color:#f5e6d3;
+    font-weight: bolder;
+    margin-right:15px;
+    transition:0.3s;
+    }
+
+    .custom-navbar .nav-link:hover{
+    color:#ffb74d;
+    }
+
+   .custom-navbar .nav-link.active{
+    color:#ff9800;
+    }
+
+    .custom-navbar .btn{
+    background:#ff9800;
+    font-weight: bolder;
+    color: #080808;
+    border:none;
+    }
+
+    .custom-navbar .btn:hover{
+    background:#e65100;
+    }
+
+    .custom-navbar .form-control{
+    border-radius:20px;
+    }
+
+        .slider{
+            height: 750px;
+            width: 100%;
+            background-image: url('coffee 4 - Copy.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+            padding-top: 10px;
+              
+        }
+       
+        footer{
+            height: 350px;
+            width: 100%;
+            background-color: saddlebrown;
+
+        }
+        .text h1{
+            height: 100%;
+            width: 60%;
+            padding-top: 0;
+            margin-top: 20px;
+            margin-left: 70px;
+            justify-content: left;
+            color:white ;
+            font-style: palatino;
+            font-size: 70px;
+            
+        }
+        .text p{
+            height: 100%;
+            width: 60%;
+            color: azure;
+            font-style: large;
+            font-size: medium;
+            margin-top: 10px;
+            margin-left: 70px;
+            word-spacing: 2px;
+            opacity: .8;
+        }
+        nav{
+            height: 50px;
+            width: 100%;
+            display: flex;
+            margin-bottom: 0px;
+            background-color: saddlebrown;
+            position: fixed;
+            top: 0px;
+            align-items:center;
+            
+
+        }
+        nav a{
+            display: flex;
+            line-height: px;
+            padding: 25px;
+            float: left;
+            color: azure;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            opacity: .9;
+            margin-left: 25px;
+            margin-bottom: 0px;
+
+        }
+        .logo{
+            padding-left: 20px;
+        }
+        .menu{
+            margin-left: auto;
+            margin-right: 20px;
+            gap: 50px;
+           
+        }
+        .menu a{
+            margin-left: 150px;
+            gap: 30px;
+           
+
+        }
+        .signup-btn{
+            float: left;
+            height: 35px;
+            width: 9%;
+            padding-right: 30px;
+            margin-right: 160px;
+            font-size: 20px;
+            font-weight: bold;
+            color:white ;
+            border-radius: 20px;
+            background-color: rgb(243, 160, 6);
+            border: none;
+            cursor: pointer;
+           
+        }
+        .signup-btn:hover{
+            background-color: rgb(230, 99, 51);
+            color:white
+        }
+         .text-btn{
+            height: 35px;
+            width: 9%;
+            margin-top: 40px;
+            color: white;
+            background-color: rgb(243, 160, 6) ;
+            border-radius: 20px;
+            border: none;
+            font-style: normal;
+            font-size: medium;
+            margin-left: 70px;
+            opacity: .8;
+            cursor: pointer;
+        }
+        .text-btn:hover{
+            background-color:rgb(230, 99, 51) ;
+        }
+        .coffee-text{
+            font-family:'lucida';
+            font-style: italic;
+            color: chocolate;
+            font-size: 25px;
+            margin-left: 10px;
+        }
+        .tagline{
+           
+            width: 30%;
+            margin-top: 10%;
+            margin-left: 70px;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(177, 172, 172);
+            opacity: .8;
+            word-spacing: 5px;
+        }
+       .stats{
+        display: flex;
+        gap: 10px;
+        margin-top: 40px;
+        margin-left: 70px;
+        cursor: pointer;
+       }
+       .stat-box{
+        
+        margin: 0px;
+       }
+       .stat-box h2{
+        font-size: 32px;
+        margin-left:8px;
+      
+       }
+       .stats p{
+        font-size: 14px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 70px;
+       }
+       .contant{
+            min-height: 350px;
+            width: 100%;
+            background-color: #fdfbf7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+       .about h1{
+        padding-top: 40px;
+        font-size: 36px;
+        color: #3e2723;
+        margin-bottom: 25px;
+        font-weight: 700px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+       }
+       .about p{
+        font-size: 18px;
+        color: #5d4037;
+        line-height: 1.8;
+        margin: 0;
+       }
+       .contant{
+        background-color: #ffffff;
+        padding: 60px 10%;
+       }
+       .sect-title{
+        font-size: 28px;
+        color: #3e2723;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #efebe9;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        
+       }
+       .product{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+        gap: 25px;
+       }
+       .card{
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 15px;
+        text-align: center;
+        background-color: #fafafa;
+        max-width: 280px;
+        margin: 0 auto;
+       }
+
+       .card img{
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 15px;
+       }
+       .card h3{
+        font-size: 16px;
+        color: #795548;
+        font-weight: bold;
+        margin-bottom: 12px;
+       }
+       .add-to-cart{
+        background-color: #3e2723;
+        color: #ffffff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 13px;
+        width: 100%;
+       } 
+     .add-to-cart:hover{
+        background-color: #5d4037;
+      }
+      #contact{
+        color: #f5efe6;
+        background-color: to top, #1a120b 0%, #4a2a15 100%;
+        background-color: #2b1d12;
+      }
+      #contact a{
+        text-decoration: none;
+      }
+      #contact a:hover{
+        text-decoration: underline;
+      }
+        
+
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top ">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">Velvet Brew</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link " href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link " href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link " href="#products">Products</a></li>
+<li class="nav-item"><a class="nav-link " href="#contact">Contact</a></li>
+<li class="nav-item"><a class="nav-link " href="#about">info</a></li>
+
+</ul>
+
+<form class="d-flex ms-3">
+<input class="form-control me-2" type="search" placeholder="Search">
+<button class="btn">Search</button>
+</form>
+</div>
+</div>
+</nav>
+
+
+
+  
+    <div id="home" class="slider">
+               <div class="tagline">Cleveland-based Coffee Shop
+               <span class="line"></span>
+               </div>
+            
+        <div class="text">
+            <h1 align="left" font size="50">DISCOVER ART OF PERFECT COFFEE.</h1>
+            <p>Experience the difference as we meticulously select and roast the finest <br> beans 
+            to create a truly unforgettable cup of coffee. Join us on a journey of<br> taste and awaken your senses, one sipe at a time.</p>
+            <button class="text-btn">Order Now</button>
+             <span class="coffee-text">Coffee</span>
+            <div class="stats">
+                <div class="stat-box">
+                    <h2>50+</h2>
+                    <p >Item of Coffee</p></div>
+                <div class="stat-box">
+                    <h2>25+</h2>
+                    <p>Order Running</p></div>
+                <div class="stat-box">
+                    <h2>100+</h2>
+                 <br>   <p>Happy Customers</p> </div>
+                 </div>
+                 </div>
+                 </div>
+    <!--slider-->
+    <div class="contant">
+        <div id ="about">
+        <h1>About Us</h1>
+    <p>At Breworia, every cup tell a story of passion, quality,and craftsmanship.<br>
+    we carefully source premium coffee beans from the finest growing regions <br> and roast them to 
+    perfection to deliver rich flavor and exceptiona aroma
+   <br><p> Our mission is to bring people together through the love of great coffee,<br> creating moments of comfort,<br> inspiration, and
+     connection.Whether you're starting your morning or enjoying <br>a relaxing break, we are dedicated to making every sip memorable </p></div>
+    </div>
+    <!--contant1--> 
+
+    <!--product-->
+  <div id="products" class="contant py-5">
+  <h2 class="sect-title">Featured Products</h2>
+  <div class="row g-4"> 
+  <div class="col-md-4">
+  <div class="card h-100">
+  <img src="Blog_Photos_58 (1).jpg" class="card-img-top" alt="coffee">
+  <div class="card-body text-center" style="background-color: #fff;">
+  <h5 class="card-title" style="font-weight: bold; color: #795548; font-family: serif;">Bean Cream Coffee</h5>
+  <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+  <p class="card-text" style="color: #795548; font-size: 15px;">$19.99</p>
+  <a href="#" class="btn w-100" style="background-color:#795548 ; color: #fff; border-radius: 0;">Add to Cart</a>
+  </div>
+  </div>
+  </div>
+
+ <div class="col-md-4">
+  <div class="card h-100">
+  <img src="2521_black_forest_coffee - Copy.jpg" class="card-img-top" alt="coffee">
+  <div class="card-body text-center" style="background-color: #fff;">
+  <h5 class="card-title" style="font-weight: bold; color: #795548; font-family: serif;">Black Forest Coffee</h5>
+  <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+  <p class="card-text" style="color: #795548; font-size: 15px;">$19.99</p>
+  <a href="#" class="btn w-100" style="background-color:#795548 ; color: #fff; border-radius: 0;">Add to Cart</a>
+  </div>
+  </div>
+  </div>
+
+ <div class="col-md-4">
+  <div class="card h-100">
+  <img src="mobcup_68526509d42eb.jpg" class="card-img-top" alt="coffee">
+  <div class="card-body text-center" style="background-color: #fff;">
+  <h5 class="card-title" style="font-weight: bold; color: #795548; font-family: serif;">Normal Coffee</h5>
+  <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+  <p class="card-text" style="color: #795548; font-size: 15px;">$19.99</p>
+  <a href="#" class="btn w-100" style="background-color:#795548 ; color: #fff; border-radius: 0;">Add to Cart</a>
+  </div>
+  </div>
+  </div>
+
+ <div class="col-md-4">
+  <div class="card h-100">
+  <img src="hot.jpg" class="card-img-top" alt="coffee">
+  <div class="card-body text-center" style="background-color: #fff;">
+  <h5 class="card-title" style="font-weight: bold; color: #795548; font-family: serif;">choco coffee</h5>
+  <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+  <p class="card-text" style="color: #795548; font-size: 15px;">$19.99</p>
+  <a href="#" class="btn w-100" style="background-color:#795548 ; color: #fff; border-radius: 0;">Add to Cart</a>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-4">
+  <div class="card h-100">
+  <img src="pngtree-there-is-a-hot-chocolate-drink-with-whipped-cream-and-nuts-image_16115417.jpg" class="card-img-top" alt="coffee">
+  <div class="card-body text-center" style="background-color: #fff;">
+  <h5 class="card-title" style="font-weight: bold; color: #795548; font-family: serif;">Affogato</h5>
+  <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+  <p class="card-text" style="color: #795548; font-size: 15px;">$19.99</p>
+  <a href="#" class="btn w-100" style="background-color:#795548 ; color: #fff; border-radius: 0;">Add to Cart</a>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-4">
+  <div class="card h-100">
+  <img src="tea.jpg" class="card-img-top" alt="coffee">
+  <div class="card-body text-center" style="background-color: #fff;">
+  <h5 class="card-title" style="font-weight: bold; color: #795548; font-family: serif;">Black Coffee</h5>
+  <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+  <p class="card-text" style="color: #795548; font-size: 15px;">$19.99</p>
+  <a href="#" class="btn w-100" style="background-color:#795548 ; color: #fff; border-radius: 0;">Add to Cart</a>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-4">
+  <div class="card h-100">
+  <img src="Mousse-a-la-italiana2.png" class="card-img-top" alt="coffee">
+  <div class="card-body text-center" style="background-color: #fff;">
+  <h5 class="card-title" style="font-weight: bold; color: #795548; font-family: serif;">Cream Coffee</h5>
+  <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+  <p class="card-text" style="color: #795548; font-size: 15px;">$19.99</p>
+  <a href="#" class="btn w-100" style="background-color:#795548 ; color: #fff; border-radius: 0;">Add to Cart</a>
+  </div>
+  </div>
+  </div> 
+   
+ <div class="col-md-4">
+  <div class="card h-100">
+  <img src="Cold-Coffee.jpg" class="card-img-top" alt="coffee">
+  <div class="card-body text-center" style="background-color: #fff;">
+  <h5 class="card-title" style="font-weight: bold; color: #795548; font-family: serif;">Coffee Milkshake</h5>
+  <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+  <p class="card-text" style="color: #795548; font-size: 15px;">$19.99</p>
+  <a href="#" class="btn w-100" style="background-color:#795548 ; color: #fff; border-radius: 0;">Add to Cart</a>
+  </div>
+  </div>
+  </div> 
+
+<div class="col-md-4">
+  <div class="card h-100">
+  <img src= "cappu.jpg" class="card-img-top" alt="coffee">
+  <div class="card-body text-center" style="background-color: #fff;">
+  <h5 class="card-title" style="font-weight: bold; color: #795548; font-family: serif;">Cappuccino Coffee</h5>
+  <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+  <p class="card-text" style="color: #795548; font-size: 15px;">$19.99</p>
+  <a href="#" class="btn w-100" style="background-color:#795548 ; color: #fff; border-radius: 0;">Add to Cart</a>
+  </div>
+  </div>
+  </div> 
+
+   </div>   
+   </div>
+   <!--contant2-->     
+   
+    
+    <!-- Footer -->
+  <footer id="contact" class="text-center text-lg-start  ">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4" Style="border-top:2PX solid #FF9F1C;">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span></span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column 1-->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Velvet Brew
+          </h6>
+          <p class="small" style="color: #b8a99a; line-height: 1.6;">
+            "Serving the finest handcrafted coffee beans and delicious brews to make every sip memeorable."
+          </p>
+        </div>
+        <!-- Grid column 2-->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-decoration-none" style="color: #b8a99a;">Bean Cream Coffee</a>
+          </p>
+          <p>
+            <a href="#!" class="text-decoration-none" style="color: #b8a99a;">Black Forest Coffee</a>
+          </p>
+          <p>
+            <a href="#!" class="text-decoration-none" style="color: #b8a99a;">Normal Coffee</a>
+          </p>
+          <p>
+            <a href="#!" class="text-decoration-none" style="color: #b8a99a;"> Affogato </a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column 3 -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-decoration-none" style="color: #b8a99a;">Home</a>
+          </p>
+          <p>
+            <a href="#!" class="text-decoration-none" style="color: #b8a99a;">About Us</a>
+          </p>
+          <p>
+            <a href="#!" class="text-decoration-none" style="color: #b8a99a;">Products</a>
+          </p>
+          <p>
+            <a href="#!" class="text-decoration-none" style="color: #b8a99a;">Contact Us</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="list-unstyled small" style="color: #b8a99a;"></i> info@velvetbrew.com</p>
+          <p>
+            <i class="fas fa-envelope me-3">info@velvetbrew.com</i>
+            
+          </p>
+          <p><i class="fas fa-phone me-2"></i> + 0324 2973181</p>
+          <p><i class="fas fa-print me-2"></i> + 0300 2337081</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+   
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: #1a120e; color: #a8988c; border-top: 1px solid #3e2e26;">
+   © 2020 to © 2026 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Velvet Brew</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
